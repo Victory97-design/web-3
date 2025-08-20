@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(54, 52, 52);
+        }
+        .container {
+            height: 400px;
+            width: 600px;
+            background-color: rgb(44, 42, 42);
+            border-radius: 15px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 50%;
+            padding: 9px 0 7px 8px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: none;
+        }
+        .checkbox-edit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 8px;
+        }
+        button {
+            margin-top: 20px;
+            width: 50%;
+            border-radius: 8px;
+            padding: 7px 65px;
+            background-color: rgb(45, 45, 156);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .radio-edit {
+            margin-top: 10px;
+        }
+        .radio-edit a {
+            color: lightblue;
+            text-decoration: none;
+        }
+        span {
+            color:#ff4f81;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span>Sur</span>fer</h1>
+        <input type="text" required placeholder="Phone number, username, or email">
+        <input type="password" required placeholder="Password">
+        
+        <div class="checkbox-edit">
+            <input type="checkbox" id="save-info">
+            <label for="save-info">Save Login Info</label>
+        </div>
+        
+        <button type="submit">Submit</button>
+        
+        <div class="radio-edit">
+            <a href="#">Forget password?</a>
+        </div>
+    </div>
+</body>
+</html>

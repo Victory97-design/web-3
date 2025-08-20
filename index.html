@@ -1,0 +1,561 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                background-image: url("pngtree-inspired-couple-logo-illustrations-vector-png-image_15635585.png");
+                background-repeat: no-repeat;
+                background-size: contain; 
+                background-position: center top;
+                background-attachment: fixed;
+                background-color: #fcdce6; 
+            }
+            * {
+                padding:0;
+                margin:0;
+                box-sizing: border-box;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            .brand-logo {
+                font-size: 2.5rem;
+                text-align: center;
+                padding-top:15px;
+            }
+            .header {
+                height:120px;
+                background-color: #ff4f81;
+                color:white;
+            }
+            .header-p{
+                text-align:center;
+                font-size: 16px;
+                font-weight: light;
+                padding-top:1px;
+            }
+            nav {
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                padding:20px 0;
+                text-align:center;
+            }
+            nav a {
+                text-decoration: none;
+                color:#ff4f81;
+                font-weight:bold;
+                margin:0 15px;
+                position:relative;
+            }
+            .nav-link:hover {
+                color:#ff4f81;
+                transition:1s;
+            }
+            .nav-link::after {
+                content :"";
+                position:absolute;
+                left:0;
+                bottom:-5px;
+                width:0%;
+                height:5px;
+                background-color: #ff4f81;
+                transition:width 0.3s ease;
+            }
+            .nav-link:hover::after {
+                width:100%;
+            }
+            .hero h1 {
+                text-align: center;
+                padding-top:60px;
+                font-size: 35px;
+            }
+            .hero {
+                min-height:250px;
+                background-color: #ffE4Ec;
+            }
+            p {
+                text-align: center;
+                padding-top:16px;
+
+            }
+            .hero button {
+                margin-top:20px;
+                padding:8px 16px;
+                border-radius:20px;
+                padding-bottom:8px;
+                font-size:1rem;
+                color:white;
+                background-color:#ff4f81 ;
+                border:none;
+                text-align: center;
+                display: block;
+                margin: 20px auto;
+                cursor: pointer;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+            }
+            .section {
+                min-height:300px;
+                background-color: #fcdce6;
+                padding:40px 30px;
+            }
+            .section h3 {
+                color:#ff4f81;
+                text-align: center;
+                font-size:30px;
+            }
+            .features {
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap:30px;
+                margin-top:20px;
+            }
+            .features-box {
+                background-color: white;
+                border-radius: 10px;
+                padding:20px;
+                width:300px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+                cursor:pointer;
+                text-align: center;
+                overflow: hidden;
+            }
+            .features-box:hover {
+                background-color:#ff4f81;
+                color:white;
+                transition: 0.3s ;
+                transform: translateY(-10px);
+            }
+            .hero2 {
+                min-height:300px;
+                background-color: #f3c7f3;
+                padding-top:40px;
+            }
+            .hero2 h2{
+                padding-top:10px;
+                font-size: 2.2rem;
+                padding-top:30px;
+                text-align: center;
+            }
+            .hero2 button {
+                margin-top:40px;
+                padding:8px 16px;
+                border-radius:20px;
+                padding-bottom:8px;
+                font-size:1.2rem;
+                color:white;
+                background-color:#ff4f81 ;
+                border:none;
+                text-align: center;
+                margin: 20px auto;
+                display: block;
+                cursor: pointer;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+            }
+            footer {
+                background-color: #ff4f81;
+                color: white;
+                text-align: center;
+                padding: 20px 0;
+                margin-top: 0px;
+            }
+            @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero button,
+            .hero2 button {
+                display: block;
+                margin: 20px auto;
+            }
+
+            .section {
+                height: auto;
+                padding: 30px 15px;
+            }
+
+            .features-box {
+                width: 90%;
+            }
+            .brand-logo {
+                font-size: 1.5rem;
+            }
+
+            .header-p {
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+                padding-top: 30px;
+            }
+
+            .hero2 h2 {
+                font-size: 1.5rem;
+            }
+        }
+            .contact {
+                background-color: #fcdce6;
+                padding-top: 10px;
+                padding-bottom:30px;
+                text-align: center;
+            }
+            .contact {
+                background-color: #fcdce6;
+                padding:10px 40px;
+                text-align:center;
+            }
+            .contact-heading1 {
+                margin-top:20px;
+                font-size:2.5rem;
+                color:#ff4f81;
+                margin-bottom:60px;
+            }
+            .contact-form{
+                max-width:500px;
+                display:flex;
+                margin:auto;
+                flex-direction: column;
+                gap:15px;
+            }
+            .contact-form input {
+                padding:12px;
+                border:1px solid #ccc;
+                border-radius:9px;
+                font-size:1rem;
+                resize:none;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+            }
+            .contact-button {
+                border-radius:25px;
+                padding:12px;
+                background-color: #ff4f81;
+                color:white;
+                border:none;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+                cursor:pointer;
+                margin-bottom:40px;
+            }
+            .contact-form button:hover {
+                background-color: #e04070;
+                 transition :0.3s ease;
+            }
+            .contact-form textarea {
+                border-radius:25px;
+                padding:25px;
+                background-color: white;
+                color:black;
+                border:none;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+                cursor:pointer;
+                padding: 32px;
+                resize :vertical;
+            }
+            .logo-icon {
+                height: 50px;
+                vertical-align: middle;
+                margin-right: 10px;
+            }   
+            .hero,
+            .section,
+            .hero2,
+            .contact {
+                background-color: rgba(252, 220, 230, 0.6);
+            }
+            hr {
+                height: 3px;          
+                background-color: #ff4f81; 
+                border: none;         
+            }
+            .hr-special {
+                height:5px;
+                background-color: #e04070;
+                width:50%;
+                align-items: center;
+                display: block;
+                margin:0 auto;
+            }
+            .join-btn12 {
+            display: block;
+            padding: 11px 30px;
+            background-color: #ff4f81;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin: 20px auto;
+            transition:  all 0.3s ease;
+            cursor: pointer;
+            width: fit-content;
+        }
+        
+        .join-btn12:hover {
+            background-color: #e04070;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.9);
+        }
+        .hero2 img {
+            display: flex;
+            justify-content: center;
+            margin-left:580px;
+            margin-top:40px;
+            border-radius:12px;
+            width:350px;
+            
+        }
+        .hero2 img:hover {
+            transform: translateY(-5px);
+        }
+        .hero2-special {
+            margin-top:10px;
+            color:#e04070;
+            font-weight:bold;
+            font-size:18px;
+        }
+        select {
+            background-color: transparent;
+            color:#ff4f81;
+            font-weight: bolder;
+            border:none;
+        }
+        </style>
+    </head>
+    <body>
+        <header class ="header">
+            <h1 class="brand-logo">
+                <img src = "pngtree-inspired-couple-logo-illustrations-vector-png-image_15635585.png" class = "logo-icon">
+                Surfer
+            </h1>
+            <p class="header-p">Find Real Conection, Not Just Matches </p>
+        </header>
+        <nav>
+            <a href = "#home" class = "nav-link">Home </a>
+            <a href = "#about" class = "nav-link">About</a>
+            <a href = "#browse" class = "nav-link">Browse</a>
+            <form method="get" target="_blank">
+                <select name="page" onchange="window.open(this.value, '_blank')">
+                    <option value="guidelines.html">Community Guidelines</option>
+                    <option value="safety.html">Safety Tips</option>
+                    <option value="safety&policy.html">Safety & Policy</option>
+                    <option value="safety&reporting.html">Safety & Reporting</option>
+                    <option value="security.html">Security</option>
+                </select>
+            </form>
+            <a href = "#ratings" class = "nav-link">Ratings</a>
+            <a href = "#review" class = "nav-link">Review</a>
+            <a href = "#join" class = "nav-link">Join Us</a>
+            <a href="" class="nav-link">Explore</a>
+        </nav>
+        <div class="hero">
+            <h1>Your Love Story Begins Here ❤️</h1>
+            <p>Joins Thousands Of Singles Looking For Love and Meaningful Relationships to spend life with one another.</p>
+            <button>Sign Up for Free</button>
+            <br>
+            <br>
+            <hr class="hr-special">
+            </div>
+
+        <div class="section" id = "about">
+            <h3>Why Choose Surfer! 🤔</h3>
+            <div class="features" id = "about">
+                <div class="features-box">
+                    <h4>Smart Matches 👍</h4>
+                    <p>We connect you with people who truly match your values and interests.</p>
+                </div>
+                <div class="features-box">
+                    <h4>Safe & Secure 🛡️</h4>
+                    <p>Your privacy matters. We protect your data with strong security.</p>
+                </div>
+                <div class="features-box">
+                    <h4>Real People 🫂</h4>
+                    <p>Every profile is reviewed to ensure a real and safe dating experience.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h3>How It Works 📱</h3>
+            <div class="features">
+                <div class="features-box">
+                    <h4>1. Create Profile 🤳</h4>
+                    <p>Tell us about yourself. It’s quick and easy.</p>
+                </div>
+                <div class="features-box">
+                    <h4>2. Meet Matches 🤝</h4>
+                    <p>We’ll recommend people just for you.</p>
+                </div>
+                <div class="features-box">
+                    <h4>3. Start Chatting 🗣️</h4>
+                    <p>Connect through private, real-time messaging.</p>
+                </div>
+            </div>
+        </div>
+        <hr class="hr-special">
+        <div class="section" id="browse">
+            <h3>Meet Some of Our Amazing Members 🌸</h3>
+            <div class="features">
+                <div class="features-box">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Jhonny" style="width:100%; border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Jhonny, 24</h4>
+                    <p>Nature lover, bookworm, and always up for deep conversations. 📚🌿</p>
+                </div>
+                <div class="features-box">
+                    <img src="https://randomuser.me/api/portraits/women/81.jpg" alt="Maya" style="width:100%; border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Miya, 27</h4>
+                    <p>Adventure seeker who loves hiking and great food. 🍜⛰️</p>
+                </div>
+                <div class="features-box">
+                    <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Leonaldo" style="width:100%; border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Leonaldo, 22</h4>
+                    <p>Artist, coffee addict, and dreaming of a romantic soulmate. ☕🎨</p>
+                </div>
+                <div class="features-box">
+                    <img src="https://randomuser.me/api/portraits/women/66.jpg"alt = "Grace" style = "width:100%; display:block;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Grace, 23</h4>
+                    <p>Doctor, booklover, and dreaming of her forever person. 📖💖</p>
+                </div>
+                <div class="features-box">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Ram" style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Ram, 25</h4>
+                    <p>Software engineer who codes by day and paints by night. 👩‍💻🎨</p>
+                </div>
+                <div class="features-box">
+                    <img src="https://randomuser.me/api/portraits/women/82.jpg" alt="Sita"  style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Sita, 25</h4>
+                    <p>Yoga enthusiast and lover of peaceful mornings with coffee. ☕🧘‍♀️</p>
+                </div>
+                <div class="features-box">
+                    <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Harry" style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Harry, 26</h4>
+                    <p>Architect, traveler, and always ready to dance in the rain. ✈️🌧️</p>
+                </div>
+                <div class="features-box">
+                    <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="Siya" style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Siya, 22</h4>
+                    <p>College student, cat mom, and aspiring poet. 🐱✍️</p>
+                </div>
+                <div class="features-box">
+                    <img src="https://randomuser.me/api/portraits/men/57.jpg" alt="Henry"  style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Henry, 24</h4>
+                    <p>Photographer capturing life's little moments. 📸🌸</p>
+                </div>
+                <div class="features-box">
+                    <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Nuancy" style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);" >
+                    <h4>Nuancy, 21</h4>
+                    <p>Student nurse with a big heart and even bigger dreams. ❤️🏥</p>
+                </div>
+                <div class="features-box">
+                    <img src="https://randomuser.me/api/portraits/men/79.jpg" alt="Rohan" style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Rohan,29</h4>
+                    <p>Music teacher who lives for harmony and connection. 🎶🤝</p>
+                </div>
+                <div class="features-box">
+                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Linda" style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Linda,27</h4>
+                    <p>Chef by passion, foodie forever — let's cook something real. 🍽️🔥</p>
+                </div>
+                <hr class="hr-special">
+           </div>
+           <div class="section" id="ratings">
+                <h3>What Our Users Say 💬</h3>
+                <div class="features">
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Jhonny" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Jhonny ❤️</h4>
+                        <p>Surfer gave me more than just matches — it gave me the belief that love still exists in the most unexpected places 💫. I met people who truly understood me in ways I never imagined 🤝. Conversations grew into real connections that made my life brighter 🌅. For that, I’ll always be grateful 🙏.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/women/81.jpg" alt="Mia" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Mia 💕</h4>
+                        <p>Before Surfer, I thought online love was just a fantasy 🌙. But here, I found someone who makes my mornings brighter 🌞 and my nights warmer 🌌. Every swipe brought me closer to someone who truly values me 💖. This journey has been life-changing 🙌.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Leonaldo" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Leonaldo  💌</h4>
+                        <p>Surfer opened doors I never thought I’d walk through 🚪. I met people who brought joy 😂 and meaning to my days 🌟. Among them, I found someone who makes my world complete 💍. This app didn’t just help me meet someone — it helped me find happiness 😊.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/women/66.jpg" alt="Grace" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Grace 🌸</h4>
+                        <p>What started as a simple chat on Surfer turned into one of the most beautiful journeys of my life ✨. I met someone who feels like home 🏡 in every way. We dream 💭, laugh 😄, and support each other 💪. Thank you for making love so real ❤️.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Ram" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Ram 🙏</h4>
+                        <p>I was searching for someone who truly understood my heart 💓. Surfer brought me love ❤️, friendship 🤗, and companionship. Every day feels like a blessing since I met my partner 🌞. I will always appreciate this platform 🌍.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/women/82.jpg" alt="Sita" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Sita 💖</h4>
+                        <p>Surfer made finding love feel natural and effortless 🌿. It introduced me to someone who truly values 💎 and understands me, and who makes every moment feel special 🎉. My life feels brighter 🌟, happier 😊, and more complete 💍. Thank you for being the reason I found my forever 💕.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Harry" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Harry 😍</h4>
+                        <p>When I joined Surfer, I didn’t expect much — maybe just a few friendly chats 💬. But what I found here was nothing short of magical ✨. I met someone who makes me feel alive ⚡, inspired 🌈, and deeply loved ❤️. This app changed my story in the best way possible 📖.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="Siya" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Siya 🌹</h4>
+                        <p>For the longest time, love felt like a dream that was too far to reach 🌙. Surfer brought it closer than ever 🚀, introducing me to someone who makes each day worth living 💓. Now, my life is filled with joy 🎉, laughter 😂, and endless memories 📸. I’ll always be thankful for that 🙏.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/men/57.jpg" alt="Henry" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Henry 🌟</h4>
+                        <p>Surfer transformed strangers into friends 🤝 and friends into soulmates 💍. It gave me a safe space to be myself 🌈 and to find someone who appreciates me just as I am 💗. Every message, every meeting, led me to something beautiful 🌹. I can never thank you enough for that 🙌.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Nuancy" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Nuancy 💞</h4>
+                        <p>To me, Surfer is more than just a dating app 💌 — it’s the place where my life changed forever 🌅. I met someone who makes my heart feel full 💖 and my days feel brighter 🌞. This journey has been unforgettable 🛤, and I owe it all to this platform 🌍. Thank you endlessly 🙏.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/men/79.jpg" alt="Rohan" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Rohan 💓</h4>
+                        <p>From the very first hello 👋 to the dreams we now share 🌠, Surfer has been the bridge 🌉 that brought us together. I found someone who understands me in ways I never thought possible 💬. My life feels richer 💎 and more complete 💍, and I couldn’t be more grateful ❤️.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Linda" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Linda 🌼</h4>
+                        <p>I never imagined I would meet both my best friend 👭 and my soulmate 💍 in one place, but Surfer made it happen 🌟. It brought me love that is genuine 💗, pure 🌿, and full of happiness 😄. This platform has changed my life in ways I will treasure forever 📖. Thank you for everything 🙏.</p>
+                   </div>
+            </div>
+        </div>
+        <br>
+        <hr class="hr-special">
+        </div>
+        <div class="contact" id="review">
+            <h2 class="contact-heading1">Your Review 📪</h2    >
+            <form class="contact-form">
+                <input type="text" placeholder = "Your First Name..." required>
+                <input type="text" placeholder = "Your Last Name..." required>
+                <textarea row ="row" placeholder = "Your Message"></textarea>
+                <button class = "contact-button">Send</button>
+            </form>
+        </div>
+        <hr class="hr-special">
+        <div class="hero2" id="explore">
+            <h2>Explore Us</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVlZgoKH1tidtcQUieJ3qJf1cdloQdyOuVUQ&s">
+            <p class = "hero2-special">Are You Exporing For the special One for your lifetine, then you're on the right track.</p>
+            <a href="explore.html" class="join-btn12" target ="_blank">Explore !</a>
+            <hr class="hr-special">
+        </div>
+        <div class="hero2" id="join">
+            <h2>Ready To Find Love? 🫷🫸</h2>
+            <p>Create your profile today and start connecting with amazing people near you.</p>
+            <a href="signin.html" class="join-btn12" target="_blank">Join Now</a>
+        </div>
+        <footer>
+            &copy; 2025 Surfer | All Rights Reserved | Privacy Policy | Terms of Use
+            &copy;
+        </footer>
+    </body>
+    </html>
